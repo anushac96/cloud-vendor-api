@@ -1,7 +1,15 @@
 package com.example.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cloud_vendor_info")   // use it when you want to create a table with different name. 
+// else by default table name with CloudVendor will be created
 public class CloudVendor {
 	
+	@Id
 	public String vendorId;
 	public String vendorName;
 	public String vendorAddress;
